@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Twitch</title>
+        <script src="./lib/CSInterface.js"></script>
+        <script src="./lib/script.js"></script>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body onload="onloaded()">
+        <div class="controls">
+            <button onclick="javascript:history.go(0)">Refresh panel</button>
+            <button onclick="addVideoSource()">+</button>
+            <button onclick="removeVideoSource()">-</button>
+            <button onclick="saveConfig()">Save Config</button>
+            <button onclick="loadConfig()">Load Config</button>
+            <button id="config-toggle" onclick="toggleConfig()">Hide ↑</button>
+        </div>
+        <div id="config-container" class="grid-container">
+            <div class="grid-layout">
+                <div class="config">
+                    <label for="twitch-client-id">Twitch Client ID</label>
+                    <input
+                        type="text"
+                        id="twitch-client-id"
+                        placeholder="abcdefghijklmnopqrstuvwxyz1234" />
+                </div>
+                <div class="config">
+                    <label for="twitch-client-secret">Twitch Client Secret</label>
+                    <input
+                        type="text"
+                        id="twitch-client-secret"
+                        placeholder="abcdefghijklmnopqrstuvwxyz1234" />
+                </div>
+                <div class="config">
+                    <label for="twitch-vod-folder">Twitch VOD folder</label>
+                    <input type="text" id="twitch-vod-folder" placeholder="D:/twitch_leecher" />
+                </div>
+                <div class="config">
+                    <label for="twitch-cache-folder">Twitch cache folder</label>
+                    <input
+                        type="text"
+                        id="twitch-cache-folder"
+                        placeholder="E:/FILES/twitch-cache" />
+                </div>
+                <div class="config">
+                    <label for="projects-folder">Projects folder</label>
+                    <input type="text" id="projects-folder" placeholder="E:/VIDEOS" />
+                </div>
+                <div class="config">
+                    <label for="presets-folder">Presets folder</label>
+                    <input type="text" id="presets-folder" placeholder="E:/FILES/ppro-files" />
+                </div>
+            </div>
+        </div>
+        <div class="video-sources-container grid-container">
+            <div class="video-sources grid-layout"></div>
+        </div>
+        <div class="controls">
+            <button id="init-project">Initialise Project</button>
+            <button id="init-sequence">Initialise Sequence</button>
+            <button id="log-toggle" onclick="toggleLog()">Hide ↑</button>
+        </div>
+        <div id="log"></div>
+    </body>
+</html>

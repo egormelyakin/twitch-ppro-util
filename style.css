@@ -1,0 +1,128 @@
+button:hover,
+hr,
+select:hover {
+    background-color: #3e3e3e;
+}
+div.controls,
+div.grid-container {
+    margin: 10px 0;
+}
+* {
+    font-family: Jetbrains Mono, monospace;
+    font-size: 12px;
+}
+body {
+    color: #e4e4e4;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 10px;
+}
+hr {
+    border: 0;
+    height: 1px;
+}
+#log {
+    border: 1px solid #3e3e3e;
+    border-radius: 1px;
+    padding: 7px 10px;
+}
+p {
+    margin: 0;
+    padding: 3px 0;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+button,
+input,
+select {
+    background-color: #2e2e2e;
+    color: #e4e4e4;
+    border: 0 solid #3e3e3e;
+    border-radius: 2px;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 26px;
+}
+button {
+    min-width: 26px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+input {
+    width: 100%;
+}
+button:active {
+    background-color: #4e4e4e;
+}
+input:placeholder-shown {
+    background-color: #3e3e3e;
+}
+input:disabled {
+    background-color: #282828;
+}
+div.controls {
+    display: flex;
+    gap: 5px;
+}
+div.grid-container,
+div.video-source,
+div.video-source-inputs {
+    display: flex;
+    flex-grow: 1;
+    gap: 5px;
+}
+div.video-source-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+div.grid-layout {
+    border: 1px solid #3e3e3e;
+    border-radius: 1px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    padding: 10px;
+    gap: 5px;
+}
+div.video-source {
+    flex-direction: column;
+    align-items: center;
+}
+div.video-source-inputs {
+    flex-direction: column;
+    width: 100%;
+}
+.row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.select-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 130px;
+}
+div.hidden {
+    display: none;
+}
+input.cache-checkbox {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+}
+input.error {
+    background-color: #5e2e2e;
+}
+input.error::placeholder {
+    color: #aaa;
+}
+div.row-spaced {
+    justify-content: space-between;
+}
+p.counter {
+    padding: 0;
+}
